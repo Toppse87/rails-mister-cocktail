@@ -1,0 +1,19 @@
+
+<h1>List of Cocktails</h1>
+
+<div class="container">
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+        <div class="col-xs-12 col-sm-4">
+         <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Rum%2C_Manhattan%2C_Tequila_Old_Fashioned.jpg/1024px-Rum%2C_Manhattan%2C_Tequila_Old_Fashioned.jpg" alt="Picture_Cocktail');">
+          <div class="card-category">Popular</div>
+          <div class="card-description">
+            <h2><%= cocktail.name %></h2>
+          </div>
+         <a class="card-link" href=<%= cocktail_path(cocktail) %> ></a>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
