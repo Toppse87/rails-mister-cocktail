@@ -22,17 +22,18 @@
       <div class="navbar-wagon-right hidden-xs hidden-sm">
 
         <a href="/" class="navbar-wagon-item navbar-wagon-link">List of Cocktails</a>
-        <a href="cocktails/new" class="navbar-wagon-item navbar-wagon-link">Create new Cocktail</a>
+        <%= link_to 'Create new Cocktail', new_cocktail_path,  class:"navbar-wagon-item navbar-wagon-link" %>
       </div>
       <div class="navbar-wagon-item hidden-md hidden-lg">
-    <div class="dropdown">
-      <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
-      <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-        <li><<a href="/cocktails" class="navbar-wagon-item navbar-wagon-link">List of Cocktails</a></li>
-        <li><a href="/new" class="navbar-wagon-item navbar-wagon-link">Create new Cocktail</a></li>
-      </ul>
-    </div>
-  </div>
+        <div class="dropdown">
+          <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
+          <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+            <li><<a href="/" class="navbar-wagon-item navbar-wagon-link">List of Cocktails</a></li>
+            <li>  <%= link_to 'Create new Cocktail', new_cocktail_path,  class:"navbar-wagon-item navbar-wagon-link" %>
+             <!-- <a href="/cocktails/new" class="navbar-wagon-item navbar-wagon-link">Create new Cocktail</a></li> -->
+          </ul>
+        </div>
+      </div>
     </div>
 
     <%= yield %>

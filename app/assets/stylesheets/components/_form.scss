@@ -1,0 +1,18 @@
+.form-new_cocktail {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  border-radius: 4px;
+  background-color: white;
+  justify-content: space-between;
+}
+
+.new_cocktail {
+  display: flex;
+}
+
+.input.file.optional.cocktail_photo {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}

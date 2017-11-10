@@ -3,7 +3,9 @@
     <div class="col-xs-12 col-sm-6 col sm-offset-3">
         <h1> <%= @cocktail.name %></h1>
 
-        <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
+        <div class="Image-Show">
+          <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
+        </div>
 
         <% @cocktail.doses.each do |dose| %>
           <li> <%= dose.description %> <%= dose.ingredient.name %> <%= link_to "Delete", dose_path(dose),
@@ -11,7 +13,13 @@
             data: { confirm: "Are you sure?" } %> </li>
         <% end %>
         <p>
-          <%= link_to "Add a dose", new_cocktail_dose_path(@cocktail) %>
+          <%= link_to "Add ingredients", new_cocktail_dose_path(@cocktail) %>
+        </p>
+        <p>
+          <%= link_to "Delete Cocktail", cocktail_path,
+          method: :delete,
+          data: { confirm: "Are you sure?" }
+           %>
         </p>
     </div>
   </div>

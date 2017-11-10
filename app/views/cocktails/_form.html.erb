@@ -1,15 +1,23 @@
-<%= simple_form_for(@cocktail) do |f| %>
-  <% if @cocktail.errors.any? %>
-     <div class="errors-container">
-      <ul>
-        <% @cocktail.errors.full_messages.each do |message| %>
-          <li> <%= message %> </li>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col sm-offset-3">
+      <%= simple_form_for(@cocktail) do |f| %>
+        <% if @cocktail.errors.any? %>
+           <div class="errors-container">
+            <ul>
+              <% @cocktail.errors.full_messages.each do |message| %>
+                <li> <%= message %> </li>
+              <% end %>
+            </ul>
+           </div>
         <% end %>
-      </ul>
-     </div>
-  <% end %>
-<%= f.input :name, class: 'form-control'%>
-<%= f.input :photo %>
-<%= f.input :photo_cache, as: :hidden %>
-<%= f.submit class: 'btn btn-primary'%>
-<% end %>
+        <div class="form-new_cocktail">
+          <%= f.input :name, class: 'form-control'%>
+          <%= f.input :photo %>
+          <%= f.input :photo_cache, as: :hidden %>
+          <%= f.submit class: 'btn btn-primary'%>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
