@@ -5,7 +5,7 @@
   <div class="row">
     <% @cocktails.each do |cocktail| %>
         <div class="col-xs-12 col-sm-4">
-         <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Rum%2C_Manhattan%2C_Tequila_Old_Fashioned.jpg/1024px-Rum%2C_Manhattan%2C_Tequila_Old_Fashioned.jpg" alt="Picture_Cocktail');">
+         <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path @cocktail.photo, height: 300, width: 400, crop: :fill %>');">
           <div class="card-category">Popular</div>
           <div class="card-description">
             <h2><%= cocktail.name %></h2>
@@ -16,5 +16,3 @@
     <% end %>
   </div>
 </div>
-
-<%= cl_image_tag("muocq5fruojymk3hs2xu", width: 400, height: 300, crop: :fill) %>
